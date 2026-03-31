@@ -1,0 +1,10 @@
+.container {
+  height: 100dvh;
+  display: grid;
+  grid-template-columns: 300px auto;
+  grid-template-rows: 60px auto;
+
+  > :first-child {
+    grid-column: span 2 / span 2;
+  }
+}
