@@ -1,0 +1,53 @@
+.header {
+  height: 60px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.createVideo {
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  width: 111px;
+  height: 35px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.1);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .PlusIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.yourProfileLink {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: gray;
+  border-radius: 50%;
+
+  &:hover {
+    background: #c2bdbd;
+  }
+
+  .hiddenText {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+.rightPart {
+  margin-right: 10px;
+  display: flex;
+  gap: 16px;
+}

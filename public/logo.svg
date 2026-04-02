@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="buttonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a865ff" />
+      <stop offset="50%" stop-color="#7332d9" />
+      <stop offset="100%" stop-color="#49139c" />
+    </linearGradient>
+    
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#d4a6ff" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect x="40" y="90" width="250" height="170" rx="50" ry="50" fill="#a865ff" filter="url(#glow)" opacity="0.6"/>
+
+  <rect x="50" y="100" width="230" height="150" rx="45" ry="45" fill="url(#buttonGrad)" stroke="#3a147a" stroke-width="6" />
+  
+  <rect x="55" y="105" width="220" height="140" rx="40" ry="40" fill="none" stroke="#d4a6ff" stroke-width="2" opacity="0.6"/>
+
+  <path d="M 135 145 L 205 175 L 135 205 Z" fill="#fdfbfa" filter="url(#glow)" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
+
+  <path d="M 85 135 Q 95 135 95 125 Q 95 135 105 135 Q 95 135 95 145 Q 95 135 85 135 Z" fill="#ffffff" filter="url(#glow)"/>
+  <path d="M 235 205 Q 245 205 245 195 Q 245 205 255 205 Q 245 205 245 215 Q 245 205 235 205 Z" fill="#ffffff" />
+  <circle cx="110" cy="180" r="1.5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="210" cy="130" r="2" fill="#ffffff" opacity="0.6"/>
+  <circle cx="170" cy="220" r="1" fill="#ffffff" opacity="0.9"/>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="900" fill="url(#textGrad)" stroke="#3a147a" stroke-linejoin="round">
+    
+    <text x="310" y="180" font-size="95" stroke-width="16">YouTube</text>
+    <text x="310" y="180" font-size="95" stroke="none">YouTube</text>
+
+    <text x="330" y="270" font-size="95" stroke-width="16">Clone</text>
+    <text x="330" y="270" font-size="95" stroke="none">Clone</text>
+    
+  </g>
+</svg>

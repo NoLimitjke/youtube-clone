@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin-top: 64px;
+}
+
+.input {
+  width: 500px;
+  height: 40px;
+  background: transparent;
+  padding: 8px 12px;
+  border: 1px solid white;
+  border-radius: 12px;
+  color: white;
+}
+
+.submitButton {
+  background: transparent;
+  padding: 8px 12px;
+  border: 1px solid white;
+  border-radius: 12px;
+  color: white;
+}
+
+.error {
+  margin-left: 8px;
+  margin-top: 5px;
+  color: #e70000;
+}
+
+.iframe {
+  margin-top: 24px;
+}

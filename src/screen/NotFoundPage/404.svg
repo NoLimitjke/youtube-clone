@@ -1,0 +1,25 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <rect x="10" y="10" width="236" height="150" rx="40" ry="40" fill="#E0F7FA" stroke="#00BCD4" stroke-width="4"/>
+
+    <circle cx="85" cy="75" r="30" fill="#FFFFFF" stroke="#0097A7" stroke-width="3"/>
+    <circle cx="171" cy="75" r="30" fill="#FFFFFF" stroke="#0097A7" stroke-width="3"/>
+    <circle cx="85" cy="75" r="10" fill="#00BCD4"/>
+    <circle cx="171" cy="75" r="10" fill="#00BCD4"/>
+    <circle cx="80" cy="70" r="4" fill="#FFFFFF"/>
+    <circle cx="166" cy="70" r="4" fill="#FFFFFF"/>
+
+    <path d="M 100 120 Q 128 140 156 120" fill="none" stroke="#00BCD4" stroke-width="4"/>
+
+    <line x1="128" y1="10" x2="128" y2="-5" stroke="#00BCD4" stroke-width="4"/>
+    <circle cx="128" cy="-5" r="6" fill="#FF9800"/>
+
+    <ellipse cx="10" cy="100" rx="10" ry="25" fill="#00BCD4"/>
+    <ellipse cx="246" cy="100" rx="10" ry="25" fill="#00BCD4"/>
+
+    <rect x="30" y="160" width="196" height="86" rx="20" ry="20" fill="#E1F5FE" stroke="#00BCD4" stroke-width="4"/>
+
+    <text x="128" y="210" text-anchor="middle" font-size="52" font-weight="bold" fill="#0097A7" font-family="Arial, sans-serif">404</text>
+    <text x="128" y="235" text-anchor="middle" font-size="16" font-weight="bold" fill="#00BCD4" font-family="Arial, sans-serif">NOT FOUND</text>
+  </g>
+</svg>

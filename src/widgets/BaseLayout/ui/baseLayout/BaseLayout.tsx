@@ -7,7 +7,7 @@ import { LeftMenu } from '../LeftMenu';
 export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={s.container}>
-      <Header />
+      <Header profileId="123" />
       <LeftMenu />
       {children}
     </div>
