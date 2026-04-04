@@ -1,70 +1,44 @@
 'use client';
-import Image from 'next/image';
+import cn from 'classnames';
 import Link from 'next/link';
 import React from 'react';
 import s from './HomeScreen.module.css';
+import { GetAllVideosDTO } from '@/src/shared/types/typesFromBackend';
+import { DEFAULT_CATEGORY, VIDEO_CATEGORIES } from '@/src/shared/constants/videoCategories';
+import { VideosList } from '@/src/widgets/VideosList/ui/VideosList/VideosList';
 
-export default function HomeScreen() {
-  const [isLoading, setIsLoading] = React.useState(true);
-  const [data, setData] = React.useState<string[] | null>(null);
-  React.useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
-      try {
-        const response = await fetch('/api/videos');
+type HomeScreenProps = {
+  received: GetAllVideosDTO['received'];
+  categories?: typeof VIDEO_CATEGORIES;
+  categoryId?: string;
+};
 
-        if (!response.ok) {
-          throw new Error(`HTTP error: ${response.status}`);
-        }
-
-        const result = await response.json();
-        setData(result.received);
-      } catch (err) {
-        console.log(err);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (isLoading) {
-    return <div>Загрузка...</div>;
-  }
+export default function HomeScreen({ received, categories, categoryId }: HomeScreenProps) {
   return (
     <div className={s.container}>
-      {data && data.length > 0 ? (
-        // Убрали лишний <div> здесь
-        data.map((videoId) => (
-          <div className={s.videoBlock} key={videoId}>
-            <Link href={`/video/${videoId}`} className={s.videoPrev}>
-              <Image
-                src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
-                alt="Название видео"
-                fill
-                className={s.videoImg}
-              />
+      <div className={s.categoriesContainer}>
+        <Link
+          href="/"
+          className={cn(s.categoryLink, {
+            [s.activeCategoryLink]: !categoryId,
+          })}>
+          {DEFAULT_CATEGORY.title}
+        </Link>
+        {categories &&
+          categories.length > 0 &&
+          categories.map((cat) => (
+            <Link
+              href={`/${cat.id}`}
+              key={cat.id}
+              className={cn(s.categoryLink, {
+                [s.activeCategoryLink]: cat.id === categoryId,
+              })}>
+              {cat.title}
             </Link>
-            <div className={s.videoInfoContainer}>
-              <Link href="/" className={s.channelImage}>
-                <div className={s.hiddenText}>Название канала</div>
-              </Link>
-              <div className={s.videoInfo}>
-                <Link className={s.videoTitle} href={`/video/${videoId}`}>
-                  Название ролика
-                </Link>
-                <Link className={s.chanelNameLink} href="">
-                  Название канала
-                </Link>
-              </div>
-            </div>
-            <Link href={`/video/${videoId}`} className={s.link} />
-          </div>
-        ))
-      ) : (
-        <div>Нет видео</div>
-      )}
+          ))}
+      </div>
+
+      <VideosList received={received} />
     </div>
   );
 }

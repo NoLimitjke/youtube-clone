@@ -21,7 +21,7 @@ export const LeftMenu = () => {
           <Upload size={24} aria-hidden="true" color="white" />
           Добавить видео
         </Link>
-        <Link href="/" className={s.link}>
+        <Link href="/myVideos" className={s.link}>
           <ListVideo size={24} aria-hidden="true" color="white" />
           Ваши видео
         </Link>

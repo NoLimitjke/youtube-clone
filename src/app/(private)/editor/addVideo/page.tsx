@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import AddVideoScreen from '@/src/screen/AddVideoPage/AddVideoScreen';
+import AddVideoScreen from '@/src/screen/AddVideoPage/ui/AddVideoScreen/AddVideoScreen';
 
 export const metadata: Metadata = {
   title: 'Добавить видео',
